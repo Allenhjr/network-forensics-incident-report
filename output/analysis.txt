@@ -1,0 +1,12 @@
+Packets: 84
+Packet categories: DNS=4, HTTP=20, TCP=60
+Rule: 4+ unique initial TCP SYNs; positive gaps within ±1.000 s of median
+PASS 192.0.2.25 -> 198.51.100.80:80 | 4 starts | gaps (s): 39.000, 36.000, 87.000
+FLAG 192.0.2.25 -> 203.0.113.40:80 | 6 starts | gaps (s): 30.000, 30.000, 30.000, 30.000, 30.000
+  #13 2026-11-20T14:00:15.000000Z
+  #21 2026-11-20T14:00:45.000000Z
+  #37 2026-11-20T14:01:15.000000Z
+  #53 2026-11-20T14:01:45.000000Z
+  #61 2026-11-20T14:02:15.000000Z
+  #69 2026-11-20T14:02:45.000000Z
+Wrote 84 timeline rows to output/timeline.csv
